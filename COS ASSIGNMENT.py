@@ -9,7 +9,7 @@ income = float(input("Enter taxable income: "))
 
 tax = 0
 
-if status == 0:  # Single
+if status == 0:  
     if income <= 8350:
         tax = income * 0.10
     elif income <= 33950:
@@ -23,7 +23,7 @@ if status == 0:  # Single
     else:
         tax = 8350 * 0.10 + (33950 - 8350) * 0.15 + (82250 - 33950) * 0.25 + (171550 - 82250) * 0.28 + (372950 - 171550) * 0.33 + (income - 372950) * 0.35
 
-elif status == 1:  # Married Filing Jointly
+elif status == 1: 
     if income <= 16700:
         tax = income * 0.10
     elif income <= 67900:
@@ -37,7 +37,7 @@ elif status == 1:  # Married Filing Jointly
     else:
         tax = 16700 * 0.10 + (67900 - 16700) * 0.15 + (137050 - 67900) * 0.25 + (208850 - 137050) * 0.28 + (372950 - 208850) * 0.33 + (income - 372950) * 0.35
 
-elif status == 2:  # Married Filing Separately
+elif status == 2: 
     if income <= 8350:
         tax = income * 0.10
     elif income <= 33950:
@@ -51,7 +51,7 @@ elif status == 2:  # Married Filing Separately
     else:
         tax = 8350 * 0.10 + (33950 - 8350) * 0.15 + (68525 - 33950) * 0.25 + (104425 - 68525) * 0.28 + (186475 - 104425) * 0.33 + (income - 186475) * 0.35
 
-elif status == 3:  # Head of Household
+elif status == 3:  
     if income <= 11950:
         tax = income * 0.10
     elif income <= 45500:
@@ -70,3 +70,4 @@ else:
     exit()
 
 print(f"Total tax is: ${tax:.2f}")
+
