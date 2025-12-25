@@ -71,3 +71,4 @@ else:
 
 print(f"Total tax is: ${tax:.2f}")
 
+
